@@ -16,7 +16,7 @@ router.post('/api/shorten', async (req, res) => {
     if (existing) {
       return res.json({
         originalUrl: existing.originalUrl,
-        shortUrl: `http://localhost:5000/${existing.shortId}`,
+        shortUrl: `https://url-shorten-server-weq9.onrender.com/${existing.shortId}`,
       });
     }
 
@@ -25,7 +25,7 @@ router.post('/api/shorten', async (req, res) => {
 
     res.status(201).json({
       originalUrl: newUrl.originalUrl,
-      shortUrl: `http://localhost:5000/${newUrl.shortId}`,
+      shortUrl: `https://url-shorten-server-weq9.onrender.com/${newUrl.shortId}`,
     });
   } catch (err) {
     console.error('Error creating short URL:', err);
