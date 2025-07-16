@@ -12,7 +12,7 @@ export default function HomePage() {
     setError('');
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/shorten', {
+      const res = await axios.post('https://url-shorten-server-weq9.onrender.com/api/shorten', {
         originalUrl,
       });
       setShortUrl(res.data.shortUrl);
