@@ -9,7 +9,7 @@ export default function StatsPage() {
   const fetchStats = async () => {
     setError(null);
     try {
-      const res = await axios.get(`http://localhost:5000/api/stats/${code}`);
+      const res = await axios.get(`https://url-shorten-server-weq9.onrender.com/api/stats/${code}`);
       setStats(res.data);
     } catch (err) {
       setStats(null);
